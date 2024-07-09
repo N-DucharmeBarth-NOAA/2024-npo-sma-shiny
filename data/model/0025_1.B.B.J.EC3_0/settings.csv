@@ -1,0 +1,2 @@
+run_id,run_number,run_name,run_retro,run_label,exec_name,n_cores,seed,chains,n_thin,iter_keep,burnin.prop,iter_total,adapt_delta,max_treedepth,silent,stan_code_dir
+0025_1.B.B.J.EC3_0-bspm_F_est,0025,1.B.B.J.EC3,0,0025_1.B.B.J.EC3_0,bspm_F_est,1,321,5,10,200,0.5,3000,0.99,15,FALSE,./boot/software/
