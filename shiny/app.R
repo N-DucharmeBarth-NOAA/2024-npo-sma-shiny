@@ -49,9 +49,9 @@ library(GGally)
 
 #_____________________________________________________________________________________________________________________________
 # source ui/server
-  source("./r-code/shiny/css.r")
-  source("./r-code/shiny/ui.R")
-  source("./r-code/shiny/server.R")
+  source("./r-code/css.r")
+  source("./r-code/ui.R")
+  source("./r-code/server.R")
 
   source_dir_stem = "./r-code/helper_fns/"
   sapply(paste0(source_dir_stem,(list.files(source_dir_stem))),source)

@@ -472,7 +472,7 @@ conditionalPanel(condition="input.sidebarmenu == 'plots_tab_cr'",
     tabItems(
       # **** Introduction ****
       tabItem(tabName="introduction", h2("Introduction"),
-        fluidRow(column(12, includeMarkdown(paste0("./r-code/shiny/introduction_index.md"))))
+        fluidRow(column(12, includeMarkdown(paste0("./r-code/introduction_index.md"))))
       ), # End of introduction tab
 
       # **** Summary table ****
