@@ -2105,7 +2105,7 @@ server = function(input, output){
       tmp_ssp_summary=fread(paste0(model_stem,selected_models[i],"fit_summary.csv"))
       tmp_stan_data=fread(paste0(model_stem,selected_models[i],"stan_data.csv"))
       tmp_settings=fread(paste0(model_stem,selected_models[i],"settings.csv"))
-      tmp_effort = fread(file="./input_data/effort_1945_1994.csv")
+      tmp_effort = fread(file="./data/effort_1945_1994.csv")
 
 
       # run catch-reconstruction

@@ -54,15 +54,15 @@ library(GGally)
   source("./r-code/server.R", local=TRUE)
 
   source_dir_stem = "./r-code/helper_fns/"
-  source(paste0(source_dir_stem),"ssp_calc_likelihood.R", local=TRUE)
-  source(paste0(source_dir_stem),"ssp_calc_rmse.R", local=TRUE)
-  source(paste0(source_dir_stem),"ssp_catch_reconstruction.R", local=TRUE)
-  source(paste0(source_dir_stem),"ssp_derived_quants.R", local=TRUE)
-  source(paste0(source_dir_stem),"ssp_derived_quants_init_recent.R", local=TRUE)
-  source(paste0(source_dir_stem),"ssp_derived_quants_ts.R", local=TRUE)
-  source(paste0(source_dir_stem),"ssp_extract_cpue_fit.R", local=TRUE)
-  source(paste0(source_dir_stem),"ssp_forecast.R", local=TRUE)
-  source(paste0(source_dir_stem),"ssp_prior_pushforward.R", local=TRUE)
+  source(paste0(source_dir_stem,"ssp_calc_likelihood.R"), local=TRUE)
+  source(paste0(source_dir_stem,"ssp_calc_rmse.R"), local=TRUE)
+  source(paste0(source_dir_stem,"ssp_catch_reconstruction.R"), local=TRUE)
+  source(paste0(source_dir_stem,"ssp_derived_quants.R"), local=TRUE)
+  source(paste0(source_dir_stem,"ssp_derived_quants_init_recent.R"), local=TRUE)
+  source(paste0(source_dir_stem,"ssp_derived_quants_ts.R"), local=TRUE)
+  source(paste0(source_dir_stem,"ssp_extract_cpue_fit.R"), local=TRUE)
+  source(paste0(source_dir_stem,"ssp_forecast.R"), local=TRUE)
+  source(paste0(source_dir_stem,"ssp_prior_pushforward.R"), local=TRUE)
 
 #_____________________________________________________________________________________________________________________________
 # Run the app
