@@ -49,12 +49,12 @@ library(GGally)
 
 #_____________________________________________________________________________________________________________________________
 # source ui/server
-  source("./r-code/css.r")
-  source("./r-code/ui.R")
-  source("./r-code/server.R")
+  source("./r-code/css.r", local=TRUE)
+  source("./r-code/ui.R", local=TRUE)
+  source("./r-code/server.R", local=TRUE)
 
   source_dir_stem = "./r-code/helper_fns/"
-  sapply(paste0(source_dir_stem,(list.files(source_dir_stem))),source)
+  sapply(paste0(source_dir_stem,(list.files(source_dir_stem))),source, local=TRUE)
 
 #_____________________________________________________________________________________________________________________________
 # Run the app
