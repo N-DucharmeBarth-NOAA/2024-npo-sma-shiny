@@ -5043,7 +5043,10 @@
   },
   "files": {
     "app.R": {
-      "checksum": "4b96a948412c4f23733974ddb92bd09f"
+      "checksum": "df9d1f8a9ffafe1c054c2f36b72c8439"
+    },
+    "data/effort_1945_1994.csv": {
+      "checksum": "c4028e57a9254dbfbc00c393b977fc41"
     },
     "data/index_mat.csv": {
       "checksum": "d6d6dc11873c02320216a59c9982cbe3"
@@ -5760,7 +5763,7 @@
       "checksum": "8587e21452309863d35bded1d6c42520"
     },
     "r-code/server.R": {
-      "checksum": "6125af4916fcce2813dfaebcd4194916"
+      "checksum": "2ee596cb336801d5108d61294172833e"
     },
     "r-code/ui.R": {
       "checksum": "4453c06b28e9571e092d772d0ee36385"
