@@ -5043,7 +5043,7 @@
   },
   "files": {
     "app.R": {
-      "checksum": "db49c5fecacc26afe878559cb3917f5f"
+      "checksum": "492d711a1a66eef7c83462589dbd0393"
     },
     "data/index_mat.csv": {
       "checksum": "d6d6dc11873c02320216a59c9982cbe3"
@@ -5723,8 +5723,8 @@
     "data/summary.csv": {
       "checksum": "3c939990d5177afc0f827312c16e5cb5"
     },
-    "r-code/css.r": {
-      "checksum": "8b2135fb03b1d1d2aeae7c37a00a626e"
+    "introduction_index.md": {
+      "checksum": "8587e21452309863d35bded1d6c42520"
     },
     "r-code/helper_fns/ssp_calc_likelihood.r": {
       "checksum": "c7968f3c24e0115414f4f3ce7777cbb6"
@@ -5755,15 +5755,6 @@
     },
     "r-code/helper_fns/stan_inits_func.r": {
       "checksum": "4a17327f0a0ba87d7d4cf4dfab1fdf1a"
-    },
-    "r-code/introduction_index.md": {
-      "checksum": "8587e21452309863d35bded1d6c42520"
-    },
-    "r-code/server.R": {
-      "checksum": "6125af4916fcce2813dfaebcd4194916"
-    },
-    "r-code/ui.R": {
-      "checksum": "4453c06b28e9571e092d772d0ee36385"
     },
     "r-code/zzz.r": {
       "checksum": "e828dc58f63edb128b5f5c14d5ec5644"
