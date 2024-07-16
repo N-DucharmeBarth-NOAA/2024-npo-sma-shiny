@@ -1,6 +1,6 @@
 # 2024-npo-sma-shiny
 
-Model output and code needed to produce a Shiny dashboard for the 2024 [ISC](https://isc.fra.go.jp/index.html) stock assessment of North Pacific Ocean shortfin mako shark. 
+Model output and code needed to produce a Shiny dashboard for the 2024 [ISC](https://isc.fra.go.jp/index.html) stock assessment of North Pacific Ocean shortfin mako shark. The full assessment report can be found [here](https://meetings.wcpfc.int/node/22828), and is a product of the ISC Shark Working Group ([SHARKWG](https://isc.fra.go.jp/working_groups/shark.html)).
 
 ### Running the models locally
 
