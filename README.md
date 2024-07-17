@@ -2,6 +2,8 @@
 
 Model output and code needed to produce a Shiny dashboard for the 2024 [ISC](https://isc.fra.go.jp/index.html) stock assessment of North Pacific Ocean shortfin mako shark. The full assessment report can be found [here](https://meetings.wcpfc.int/node/22828), and is a product of the ISC Shark Working Group ([SHARKWG](https://isc.fra.go.jp/working_groups/shark.html)).
 
+A companion repository housing the input data, model code, and executables needed to reproduce the full 2024 ISC stock assessment of North Pacific Ocean shortfin mako shark can be found [here](https://github.com/N-DucharmeBarth-NOAA/2024-npo-sma-taf).
+
 ### Running the models locally
 
 Users should [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository on their local machine.
