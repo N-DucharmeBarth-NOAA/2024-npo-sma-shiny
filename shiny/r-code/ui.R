@@ -23,8 +23,8 @@ ui = dashboardPage(
       awesomeCheckboxGroup(
       inputId = "hmc.leading_params",
       label = "Parameter", 
-        choices = c("logK","x0","r","sigmao","sigmap","shape","lp__"),
-      selected = c("logK","x0","r","lp__")),
+        choices = c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","lp__"),
+      selected = c("logK","x0","r")),
       # raw
       switchInput(
       inputId = "hmc.raw",  
@@ -167,7 +167,7 @@ ui = dashboardPage(
       awesomeCheckboxGroup(
       inputId = "ppp.leading_params",
       label = "Parameter", 
-        choices = c("logK","x0","r","sigmao","sigmap","shape"),
+        choices = c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q"),
       selected = c("logK","x0","r")),
       # raw
       switchInput(

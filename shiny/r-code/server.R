@@ -37,7 +37,7 @@ server = function(input, output){
     selected_models = sapply(sapply(input_models,function(x)strsplit(x,"-")[[1]][1]),function(x)all_dirs[grep(x,all_dirs,fixed=TRUE)])
     tmp_summary = fread(paste0(model_stem,selected_models,"fit_summary.csv"))
     # map parameters
-    parameter_map = cbind(c("logK","x0","r","sigmao","sigmap","shape","lp__"),c("logK","x0","r","sigmao","sigmap","n","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_logsigmao","raw_logsigmap","raw_logn","lp__"))
+    parameter_map = cbind(c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","lp__"),c("logK","x0","r","sigmao_add","sigmap","n","sigmaf","ll_q","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_sigmao_add","raw_logsigmap","raw_logn","raw_sigmaf","raw_logll_q","lp__"))
     colnames(parameter_map) = c("input","transformed","raw")
     plot_dt = rbindlist(lapply(selected_models,function(x)fread(paste0(model_stem,x,"hmc_samples.csv"))))
 
@@ -116,7 +116,7 @@ server = function(input, output){
     selected_models = sapply(sapply(input_models,function(x)strsplit(x,"-")[[1]][1]),function(x)all_dirs[grep(x,all_dirs,fixed=TRUE)])
     tmp_summary = fread(paste0(model_stem,selected_models,"fit_summary.csv"))
     # map parameters
-    parameter_map = cbind(c("logK","x0","r","sigmao","sigmap","shape","lp__"),c("logK","x0","r","sigmao_sc","sigmap","n","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_logsigmao","raw_logsigmap","raw_logn","lp__"))
+    parameter_map = cbind(c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","lp__"),c("logK","x0","r","sigmao_add","sigmap","n","sigmaf","ll_q","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_sigmao_add","raw_logsigmap","raw_logn","raw_sigmaf","raw_logll_q","lp__"))
     colnames(parameter_map) = c("input","transformed","raw")
     plot_dt = rbindlist(lapply(selected_models,function(x)fread(paste0(model_stem,x,"hmc_samples.csv"))))
 
@@ -195,7 +195,7 @@ server = function(input, output){
     selected_models = sapply(sapply(input_models,function(x)strsplit(x,"-")[[1]][1]),function(x)all_dirs[grep(x,all_dirs,fixed=TRUE)])
     tmp_summary = fread(paste0(model_stem,selected_models,"fit_summary.csv"))
     # map parameters
-    parameter_map = cbind(c("logK","x0","r","sigmao","sigmap","shape","lp__"),c("logK","x0","r","sigmao_sc","sigmap","n","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_logsigmao","raw_logsigmap","raw_logn","lp__"))
+    parameter_map = cbind(c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","lp__"),c("logK","x0","r","sigmao_add","sigmap","n","sigmaf","ll_q","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_sigmao_add","raw_logsigmap","raw_logn","raw_sigmaf","raw_logll_q","lp__"))
     colnames(parameter_map) = c("input","transformed","raw")
     plot_dt = rbindlist(lapply(selected_models,function(x)fread(paste0(model_stem,x,"hmc_samples.csv"))))
 
@@ -280,11 +280,11 @@ server = function(input, output){
     tmp_summary = fread(paste0(model_stem,selected_models,"fit_summary.csv"))
     # map parameters
     if(input$hmc.eps == "FALSE"){
-      parameter_map = cbind(c("logK","x0","r","sigmao","sigmap","shape","lp__"),c("logK","x0","r","sigmao_sc","sigmap","n","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_logsigmao","raw_logsigmap","raw_logn","lp__"))
+      parameter_map = cbind(c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","lp__"),c("logK","x0","r","sigmao_add","sigmap","n","sigmaf","ll_q","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_sigmao_add","raw_logsigmap","raw_logn","raw_sigmaf","raw_logll_q","lp__"))
       colnames(parameter_map) = c("input","transformed","raw")
       target_par = input$hmc.leading_params
     } else {
-      parameter_map = cbind(c("logK","x0","r","sigmao","sigmap","shape","epsp","lp__"),c("logK","x0","r","sigmao_sc","sigmap","n","epsp","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_logsigmao","raw_logsigmap","raw_logn","raw_epsp","lp__"))
+      parameter_map = cbind(c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","epsp","lp__"),c("logK","x0","r","sigmao_add","sigmap","n","sigmaf","ll_q","epsp","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_sigmao_add","raw_logsigmap","raw_logn","raw_sigmaf","raw_logll_q","raw_epsp","lp__"))
       colnames(parameter_map) = c("input","transformed","raw")
       target_par = c(input$hmc.leading_params,"epsp")
     }
@@ -336,11 +336,11 @@ server = function(input, output){
     tmp_summary = fread(paste0(model_stem,selected_models,"fit_summary.csv"))
     # map parameters
     if(input$hmc.eps == "FALSE"){
-      parameter_map = cbind(c("logK","x0","r","sigmao","sigmap","shape","lp__"),c("logK","x0","r","sigmao_sc","sigmap","n","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_logsigmao","raw_logsigmap","raw_logn","lp__"))
+      parameter_map = cbind(c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","lp__"),c("logK","x0","r","sigmao_add","sigmap","n","sigmaf","ll_q","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_sigmao_add","raw_logsigmap","raw_logn","raw_sigmaf","raw_logll_q","lp__"))
       colnames(parameter_map) = c("input","transformed","raw")
       target_par = input$hmc.leading_params
     } else {
-      parameter_map = cbind(c("logK","x0","r","sigmao","sigmap","shape","epsp","lp__"),c("logK","x0","r","sigmao_sc","sigmap","n","epsp","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_logsigmao","raw_logsigmap","raw_logn","raw_epsp","lp__"))
+      parameter_map = cbind(c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","epsp","lp__"),c("logK","x0","r","sigmao_add","sigmap","n","sigmaf","ll_q","epsp","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_sigmao_add","raw_logsigmap","raw_logn","raw_sigmaf","raw_logll_q","raw_epsp","lp__"))
       colnames(parameter_map) = c("input","transformed","raw")
       target_par = c(input$hmc.leading_params,"epsp")
     }
@@ -391,7 +391,7 @@ server = function(input, output){
     selected_models = sapply(sapply(input_models,function(x)strsplit(x,"-")[[1]][1]),function(x)all_dirs[grep(x,all_dirs,fixed=TRUE)])
     tmp_summary = fread(paste0(model_stem,selected_models,"fit_summary.csv"))
     # map parameters
-      parameter_map = cbind(c("logK","x0","r","sigmao","sigmap","shape","lp__"),c("logK","x0","r","sigmao_sc","sigmap","n","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_logsigmao","raw_logsigmap","raw_logn","lp__"))
+      parameter_map = cbind(c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","lp__"),c("logK","x0","r","sigmao_add","sigmap","n","sigmaf","ll_q","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_sigmao_add","raw_logsigmap","raw_logn","raw_sigmaf","raw_logll_q","lp__"))
       colnames(parameter_map) = c("input","transformed","raw")
       target_par = input$hmc.leading_params
 
@@ -1337,7 +1337,7 @@ server = function(input, output){
     selected_models = sapply(sapply(input_models,function(x)strsplit(x,"-")[[1]][1]),function(x)all_dirs[grep(x,all_dirs,fixed=TRUE)])
     tmp_summary = rbindlist(lapply(paste0(model_stem,selected_models,"fit_summary.csv"),fread),fill=TRUE)
     # map parameters
-      parameter_map = cbind(c("logK","x0","r","sigmao","sigmap","shape","lp__"),c("logK","x0","r","sigmao_sc","sigmap","n","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_logsigmao","raw_logsigmap","raw_logn","lp__"))
+      parameter_map = cbind(c("logK","x0","r","sigmao_add","sigmap","shape","sigmaf","ll_q","lp__"),c("logK","x0","r","sigmao_add","sigmap","n","sigmaf","ll_q","lp__"),c("raw_logK","raw_logx0","raw_logr","raw_sigmao_add","raw_logsigmap","raw_logn","raw_sigmaf","raw_logll_q","lp__"))
       colnames(parameter_map) = c("input","transformed","raw")
       target_par = input$ppp.leading_params
 
